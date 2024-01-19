@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+ 
+<!-- Head Section content -->
+<head>
+        <link href='https://fonts.googleapis.com/css?family=Acme' rel='stylesheet'>
+    
+    <style>
+        body {
+            background-image: url({{url_for('static',filename='builtin/bgg.jpeg')}});
+         background-size: cover;
+        
+ 
+}
+       ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+   
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+    font-size:22px;
+    margin-left:200px;
+    margin-right:100px;
+}
+        .abc{
+            background-color: #333;
+         opacity: 0.75;}
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #111;
+}
+        .active {
+  background-color: #04AA6D;
+}
+     .h
+            {
+                font-family: "Times New Roman", Times, serif;
+                color: white;
+                text-align: center;
+               
+                
+                font-size: 40px;
+            }
+            
+        .button {
+  background-color: brown; /* Green */
+  border: none;
+            opacity:10;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+        button:hover{
+            color: red;}
+        .button:hover {
+  background-color: orange; /* Green */
+  color: white;
+}
+            
+input[type=number]{
+    border-radius: 5px;
+    
+        width:50px;}
+        label{
+            font-size:20px;
+            margin-top:20px;
+        font-family: 'Aleo';
+            font-weight:bold;
+        
+            
+        color:white;}
+
+section   {text-align:center; border: 3px white;
+    margin-left:200px;
+    margin-right:200px;
+    margin-top:40px;
+    margin-bottom:50px;
+    border-radius: 50px;
+    background-color:black;
+     opacity: 0.75;
+    
+    
+        border-style:groove;}
+        h1{font-size:30px;
+            font-family: Georgia, serif;
+            color:black;
+            
+        text-align:center;}
+            
+p    {color: white;
+        font-size:26px;}
+</style>
+ 
+    <!-- Page title -->
+    <title>Basic Web Page</title>
+</head>
+ 
+<!-- Body Section content -->
+<body>
+    <div class="abc">
+         <p class="h">DETECTION OF FIRE AND PREDICTION IF IT CAN BE EXTINGUISHED</p>
+               
+    <ul>
+  <li><a href="{{ url_for('index') }}"> Predict If the fire can be extinguished or not         </a></li>
+        <li><a href="{{ url_for('index1') }}">Fire Detection Using Vedio </a></li></div>
+        <section>
+            <p>This Web application enables users to detect fire in a vedio by splitting the vedio into frames and also provides another link to predict if it can be extinguished or not.<br><br>
+            The links on the navbar above: Using Vedio would require a Vedio to be uploaded to detect Fire.
+            <br>
+            Extinguishion Prediction would require SIZE,FUEL,DECIBEL,AIRFLOW,FREQUENCY and DISTANCE values<br></p>
+ 
+ 
+        
+ 
+ 
+</ul>
+    
+    
+</body>
+ 
+</html>

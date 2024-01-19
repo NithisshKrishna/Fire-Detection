@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+ 
+<!-- Head Section content -->
+<head>
+        <link href='https://fonts.googleapis.com/css?family=Acme' rel='stylesheet'>
+    
+    <style>
+        body {
+            background-image: url({{url_for('static',filename='builtin/bgg.jpeg')}});
+         background-size: cover;
+        
+ 
+}
+         ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+   
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+    font-size:22px;
+    margin-left:200px;
+    margin-right:100px;
+}
+        .abc{
+            background-color: #333;
+         opacity: 0.75;}
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #111;
+}
+        .active {
+  background-color: #04AA6D;
+}
+      
+        .button {
+  background-color: brown; /* Green */
+  border: none;
+            opacity:10;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+        button:hover{
+            color: red;}
+        .button:hover {
+  background-color: orange; /* Green */
+  color: white;
+}
+            
+input[type=number]{
+    border-radius: 5px;
+    
+        width:50px;}
+        label{
+            font-size:20px;
+            margin-top:20px;
+        font-family: 'Aleo';
+            font-weight:bold;
+        
+            
+        color:white;}
+         
+            .p
+            {
+                font-family: "Times New Roman", Times, serif;
+                color: white;
+                font-size: 30px;
+            }
+            
+
+section   {text-align:center; border: 3px white;
+    margin-left:200px;
+    margin-right:200px;
+    margin-top:40px;
+    margin-bottom:50px;
+    border-radius: 50px;
+    background-color:black;
+     opacity: 0.75;
+    
+    
+        border-style:groove;}
+        h1{font-size:30px;
+          font-family: "Times New Roman", Times, serif;
+            color:white;
+            background-color: #333;
+             font-size: 40px;
+            
+        text-align:center;}
+        .h
+            {
+                font-family: "Times New Roman", Times, serif;
+                color: white;
+                text-align: center;
+               
+                
+                font-size: 40px;
+            }
+            
+
+</style>
+ 
+    <!-- Page title -->
+    <title>Basic Web Page</title>
+</head>
+ 
+<!-- Body Section content -->
+<body>
+    <div class="abc">
+         <p class="h">WILL FIRE GET EXTINGUISHED?</p>
+               
+    <ul>
+  <li><a href="{{ url_for('index') }}"> Predict if the fire can be extinguished or not         </a></li>
+  <li><a href="{{ url_for('index1') }}">Fire Detection Using Vedio </a></li>
+ 
+ 
+        </ul></div>
+    <section>
+ 
+    <!-- Used to display heading content -->
+    
+    <form action="{{ url_for('predict')}}" method="post">
+        <br>
+  <label for="size">SIZE:</label><br>
+  <input style="font-size:20px;" type="number" id="fname" name="1" min=0 required ><br><br><br>
+  
+        <label for="lname00">FUEL:</label><br>
+  <input style="font-size:20px;" type="number" id="lname00" name="2" min=0 required><br><br><br>
+         <label for="lname10">DISTANCE:</label><br>
+  <input style="font-size:20px;" type="number" id="lname10" name="3" required><br><br><br>
+        <label for="lname1">DECIBEL:</label><br>
+  <input style="font-size:20px;" type="number" id="lname1" name="4" min=0 required><br><br><br>
+        <label for="lname2">AIRFLOW:</label><br>
+  <input style="font-size:20px;" type="number" id="lname2" name="5" min=0 required><br><br><br>
+        <label for="lname3">FREQUENCY:</label><br>
+  <input style="font-size:20px;" type="number" id="lname3" name="6" min=0 required><br><br><br>
+  <input type="submit" class="button" value="PREDICT">
+        
+</form> 
+ 
+    <!-- Used to display paragrapg content -->
+        <h1> {{ prediction_text }}</h1>
+    </section>
+     
+</body>
+ 
+</html>

@@ -1,0 +1,186 @@
+
+<html>
+    <head>
+        <style>
+            body
+            {
+               background-image: url({{url_for('static',filename='builtin/bgg.jpeg')}});
+         background-size: cover;
+            }
+            
+         ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+   
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+    font-size:22px;
+    margin-left:200px;
+    margin-right:100px;
+}
+        .abc{
+            background-color: #333;
+         opacity: 0.75;}
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #111;
+}
+        .active {
+  background-color: #04AA6D;
+}
+            
+            .h
+            {
+                font-family: "Times New Roman", Times, serif;
+                color: white;
+                text-align: center;
+               
+                
+                font-size: 40px;
+            }
+            
+            .p
+            {
+                font-family: "Times New Roman", Times, serif;
+                color: white;
+                font-size: 30px;
+            }
+            
+            .button 
+            {
+               background-color: brown; /* Green */
+               opacity: 0.75;
+               
+               opacity:8;
+               color: white;
+               padding: 10px 10px;
+               text-align: center;
+               text-decoration: none;
+               display: inline-block;
+               font-size: 16px;
+               
+            }
+        
+            button:hover
+            {
+               color: red;
+            }
+            
+            .button:hover 
+            {
+               background-color: orange; /* Green */
+               color: white;
+            }
+         
+            .button1 
+            {
+               background-color: white; /* Green */
+               opacity: 0.75;
+               border-style:groove;
+               opacity:8;
+               color: black;
+               padding: 10px 10px;
+               text-align: center;
+               text-decoration: none;
+               display: inline-block;
+               font-size: 16px;
+               border-radius: 25px; 
+            }
+          
+            section   
+            {
+               text-align : center; 
+               border: 3px white;
+               margin-left:200px;
+               margin-right:200px;
+               margin-top:40px;
+               margin-bottom:50px;
+               border-radius: 50px;
+               background-color:black;
+               opacity: 0.75;
+               border-style:groove;
+                height:350px;
+            }
+            
+            h1
+            {
+               font-size:30px;
+               font-family: Georgia, serif;
+               color:white;
+               text-align:center;
+            }
+            
+            p    
+            {
+                color: red;
+            }
+        </style>
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/CSS.css') }}">
+    </head>
+    
+    <body>
+        
+        <div class="abc">
+            <p class="h">DETECT FIRE</p>
+               
+    <ul>
+  <li><a href="{{ url_for('index') }}"> Predict If the fire can be extinguished or not         </a></li>
+  <li><a href="{{ url_for('index1') }}">Fire Detection Using Vedio </a></li>
+ 
+ 
+        </ul></div>
+        <div>
+        <section>    
+        <!-- <form action="/result" method="POST" enctype="multipart/form-data">
+            <br>
+            <label for="photo" class='p'>Choose a video file to upload:</label>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <input type="file" id="myFile" name="filename" accept=" video/*" class="button1" required>
+            <br>
+            <br>
+            <br>
+            <input type="submit" value="DETECT" class="button">
+        </form> -->
+        <form action="/result" method="POST" enctype="multipart/form-data">
+            <br>
+            <label for="photo" class='p'>Choose an image file to upload:</label>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <input type="file" id="myFile" name="filename" accept="image/*" class="button1" required>
+            <br>
+            <br>
+            <br>
+            <input type="submit" value="DETECT" class="button">
+        </form>
+        
+        </section>    
+        </div>
+        <script>
+            function myFunction() 
+            {
+                  var x = document.getElementById("myFile").value;
+                  document.getElementById("demo").innerHTML = x;
+            }
+        </script>
+    </body>
+</html>
