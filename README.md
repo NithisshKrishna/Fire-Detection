@@ -3,10 +3,13 @@
 Currently, fire is detected using devices like sensors, smoke detectors.
 These devices have a lot of disadvantages.
 Sensors:
+
 ● Uses radioactive materials
 ● Extremely sensitive – False alarms are common
 ● Batteries have to be charged often
+
 Smoke Detectors :
+
 ● Circuit Malfunctions
 ● Extremely sensitive to dust and air particles - regular maintenance
 is needed.
